@@ -1,0 +1,37 @@
+.m-content{
+    min-height: 50vh;
+    &__currency{
+        background-color: #D2D2D2;
+        height: 25vh;
+        &__inputs{
+            height: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            & > input{
+                padding: 5px 10px;
+                margin: 0 15px;
+                &:focus, &:active{
+                    outline: none;
+                }
+            }
+        }
+        &__button{
+            height: 50%;
+            text-align: center;
+            display: flex;
+            & > button{
+                color: white;
+                border: none;
+                border-radius: 3px;
+                background-color: #BCBCBC;
+                padding: 10px 50px;
+                margin: auto;
+                cursor: pointer;
+                &:focus, &:active{
+                    outline: none;
+                }
+            }
+        }
+    }
+}
