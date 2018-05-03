@@ -1,0 +1,23 @@
+
+<div class="c-content">
+  <div class="c-inputs">
+    <input 
+      (input)="changeSourceCurrency($event)"
+      [value]="sourceCurrencyFormatted"
+      class="c-inputs__input c-inputs__input--source" 
+      type="text" placeholder="USD">
+    <input 
+      [value]="targetCurrencyFormatted"
+      class="c-inputs__input c-inputs__input--target" 
+      type="text" placeholder="EU" disabled>
+  </div>
+  <div class="c-buttonset">
+    <button
+      (click)="calculateExchange()"
+      class="c-buttonset__button"
+      [ngClass]="{'c-buttonset__button--loading': loadinExchange}"
+    >
+      CALCULATE
+    </button>
+  </div>
+</div>

@@ -1,21 +1,65 @@
+@import '../../variables';
+
 .f-line{
     height: 5px;
     background-color: grey;
 }
 .f-content{
     height:25vh;
-    background-color: #D2D2D2;
+    background-color: #AAA;
     &__mock {
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
-        background-image: 
-            /* layer 2: titles */
-            repeating-linear-gradient(to right, #8C8C8C, #8C8C8C 75px, transparent 75px, transparent 150px),
-            repeating-linear-gradient(to right, #AAA, #AAA 100px, transparent 100px, transparent 150px),
-            repeating-linear-gradient(to right, #AAA, #AAA 90px, transparent 90px, transparent 150px),
-            repeating-linear-gradient(to right, #AAA, #AAA 100px, transparent 100px, transparent 150px);
-        background-size: 600px 12px,600px 10px;
-        background-position:  center 5vh,center 9vh,center 12vh,center 15vh;
+    }
+}
+
+@include responsive-desktop {
+    .f-content{
+        &__mock {
+            background-image: 
+                repeating-linear-gradient(to right, #666, #666 75px, transparent 75px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 100px, transparent 100px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 90px, transparent 90px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 100px, transparent 100px, transparent 150px);
+            background-size: 600px 12px,600px 10px;
+            background-position:  center 5vh,center 9vh,center 12vh,center 15vh;
+        }
+    }
+}
+@include responsive-tablet {
+    .f-content{
+        height:40vh;
+        &__mock {
+            background-image: 
+                repeating-linear-gradient(to right, #666, #666 75px, transparent 75px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 100px, transparent 100px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 90px, transparent 90px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 100px, transparent 100px, transparent 150px),
+                repeating-linear-gradient(to right, #666, #666 75px, transparent 75px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 100px, transparent 100px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 90px, transparent 90px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 100px, transparent 100px, transparent 150px);
+            background-size: 300px 12px,300px 10px,300px 10px,300px 10px,300px 12px,300px 10px,300px 10px,300px 10px;
+            background-position:  center 5vh,center 9vh,center 12vh,center 15vh,center 20vh,center 24vh,center 27vh,center 30vh;
+        }
+    }
+}
+@include responsive-smartphone {
+    .f-content{
+        height:40vh;
+        &__mock {
+            background-image: 
+                repeating-linear-gradient(to right, #666, #666 75px, transparent 75px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 100px, transparent 100px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 90px, transparent 90px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 100px, transparent 100px, transparent 150px),
+                repeating-linear-gradient(to right, #666, #666 75px, transparent 75px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 100px, transparent 100px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 90px, transparent 90px, transparent 150px),
+                repeating-linear-gradient(to right, #888, #888 100px, transparent 100px, transparent 150px);
+            background-size: 300px 12px,300px 10px,300px 10px,300px 10px,300px 12px,300px 10px,300px 10px,300px 10px;
+            background-position:  center 5vh,center 9vh,center 12vh,center 15vh,center 20vh,center 24vh,center 27vh,center 30vh;
+        }
     }
 }

@@ -1,2 +1,25 @@
 // You can add globals Sass variables and Mixins.
 
+/****************
+**  VARIABLES  **
+****************/
+
+/*************
+**  MIXINS  **
+*************/
+
+@mixin responsive-desktop() {
+    @media (min-width: 769px) {
+        @content;
+    }
+}
+@mixin responsive-tablet() {
+    @media (min-width: 576px) and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin responsive-smartphone() {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
